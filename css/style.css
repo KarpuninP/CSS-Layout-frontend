@@ -1,0 +1,938 @@
+/* rest css */
+img{border:none;}
+textarea,input,button{outline:none;}
+textarea:focus, input:focus, button:focus{outline:none; border:none;}
+textarea:active, input:active, button:active{outline:none;border:none;}
+a:hover {outline: none;}
+.btn.submit:focus {
+    outline-style: none;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, main {
+    display: block;
+}
+label{margin:0;}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+/* стили сайта начинаются от сюда */
+body {                                        /* задаем цвет всей страници */
+    background-color: #F5F5F5;
+    font-family: 'Inter', sans-serif;         /* задаем шрифт всему сайту */
+}
+
+/* Задаем максимальную и минимальную ширину для сужение и растяжение. Сверху и снизу отступы 0, а по бакам автомат
+*/
+.wrap {
+    max-width: 1160px;                      /* Не дает шире стать */
+    min-width: 320px;                        /* Для ползунка прокрутки */
+    margin: 0 auto;                         /* Центрирование */
+}
+.black {
+    background-color: #2A2A2A;              /* Задает черную полосу */
+
+}
+
+.header {                                     /* разделение на 2 части лого и номер телефона */
+    display: flex;
+    justify-content: space-between;           /* делет между ними пробелы */
+    align-items: center;                    /* центрирование относительно лого влияет на высоту когда флекс в строчку, а если по вертикале то на оборот */
+    padding: 20px 0;
+    margin-bottom: 45px;                    /* ставим отступ для дальнейшего. Отступают сверху в низ */
+}
+
+.header .nav {                              /* разделяем лого и меню левую часть*/
+    display: flex;
+    align-items: center;                    /* центрирование относительно лого*/
+}
+
+.header .phone {                             /* разделяем правую часть */
+    display: flex;
+}
+
+.header .logo {                               /* отступ лого от меню */
+    margin-right: 50px;
+}
+
+.header .nav a {                             /* работа в меню */
+    margin-right: 50px;                      /* отступ между словами в меню */
+    text-decoration: none;                    /* форматируем текст */
+    color: #fff;                             /* цвет текста */
+    font-size: 18px;                         /* размер текста */
+}
+
+/* Псевдоклассы */
+
+.header .nav a:last-child {                 /* обрашаемся к последней сылке */
+    margin-right: 0;                         /* убераем отступ */
+}
+
+.header .phone .number {                      /* правельное отображение картинки с сылкой делаем все в строку */
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+.header .phone .number img {           /* работа с картинокой телефон */
+    display: block;                    /* переводим его в блочный элемент */
+    margin-right: 10px;                /* делаем отступ */
+    width: 14px;                       /* флек убил пропорции картинки, задаем в ручную */
+    height: 14px;
+}
+.header .phone .call {                   /* кнопка перезвони мне  */
+    border: 1px solid #ffffff;           /* создаем рамка вокруг: толшина тип цвет  */
+    border-radius: 20px ;               /* закругление имеет 4 свойства  */
+    color: #fff;                        /* цвет текста  */
+    padding: 10px 20px;                 /* внутрение отступы от текста  */
+    transition: .3s;                   /*  время выполнение задачи, ноль можно не указывать (0,3)  */
+}
+
+.header .phone .call:hover {           /* псевдокласс :hover срабатывает, когда пользователь наводит на элемент мышью */
+    background: #E1E1E1;               /* В какой цвет должен изменятся при наведение  */
+    box-shadow: 0 0 6px 1px #cccc ;    /* смешение x, y , размытость ,рамка толшина ,цвет ( это тень) */
+    color: #2A2A2A;                    /* изменение цвета текста при наведении  */
+}
+
+/* Средняя часть сайта  по разделом  */
+
+/* about-company  */
+
+/* блок о компании  */
+#about-company .about {                  /* конетейнер в котором содержится блок о компании */
+    margin-bottom: 80px;                 /*  отступ для следуюшего блока  */
+}
+
+#about-company .about h1 {              /*  заголовок "о компании"  */
+    font-size: 32px;                  /* размер текста  */
+    font-weight: 700;                 /* толшина текста, размер толшены зависит от типа шрифта подключоного гугла  */
+    color: #2a2a2a;                    /* цвет текста */
+    text-align: center;               /* расположение шрифта относительно блока  */
+    margin-bottom: 33px;              /* Нижний отступ для другого блока */
+}
+
+#about-company .about .text-about {           /*   блок который где содержатся будет тег с текст */
+    border-left: 2px solid #2a2a2a ;         /*  с лева будет полоска  */
+    padding: 0 30px;                         /*  внутрений отступ  */
+    margin: 0 88px 78px 88px;                /*  внешний отступ 88px по бокам и 78px вниз  */
+}
+
+#about-company .about .text-about p {         /* блок с текстом   */
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #2a2a2a;
+}
+
+#about-company .about .text-about p:first-child {            /*  что бы первый элемент был внешний отступ  */
+    margin-bottom: 38px;
+}
+
+/* блок контакты  */
+#about-company .contact-text {                              /* контейнер с контактами   */
+    margin-bottom: 50px;                                   /*  внешний отступ вниз  */
+    background-color: #f5f5f5;                             /*  цвет фона  */
+}
+
+#about-company .contact-text h2 {                           /*  заголовок   */
+    text-align: center;                                     /* расположение шрифта относительно блока  */
+    font-size: 32px;
+    line-height: 48px;
+    font-weight: 700;
+    color: #2a2a2a;
+    margin-bottom: 50px;                                    /*  внешний отступ вниз  */
+}
+
+#about-company .contact-text .contact-main {                /*  контейнер с адресом и картой  */
+    display: flex;
+    padding-bottom: 60px;                                    /*  внутрений отступ  */
+}
+
+#about-company .contact-text .contact-main .time-information {         /*  блок с контактами  */
+    padding: 40px;
+}
+
+#about-company .contact-text .time-information p {             /*  текст когда работаем  */
+    font-size: 24px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #2a2a2a;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+
+#about-company .contact-text .time-information li {        /*  контакты и арес  */
+    padding: 19px;
+    border-bottom: 1px solid rgba(27, 27, 28, .1);        /*  задаем нужный цвет рамок и прозрачность  */
+    font-size: 18px;                                      /*  шрифт  */
+    line-height: 24px;
+    font-weight: 400;
+    color: #2a2a2a;
+}
+
+#about-company .contact-text .time-information li:last-child {            /*  убераем последнию рамку  */
+    border-bottom: none;
+}
+
+#about-company .contact-text .time-information li a {                    /*  сылки звонок и эмейл  */
+    text-decoration: none;                                               /*  убираем декарация   */
+    color: #2a2a2a;                                                      /* залаем цвет   */
+}
+
+#about-company .contact-text .time-information .social {                  /*  отображение ярлыков по флексу  */
+    display: flex;
+}
+
+#about-company .contact-text .time-information .social a {                  /* социальные сети ярлыки   */
+    display: block;                                                         /*  делаем элемент блочный  */
+    background-image: url("../pic/label.png");                               /*  указываем путь к картинки  */
+    filter: brightness(0.1);                                                 /*  делаем их чёрными  */
+    margin-right: 20px;                                                      /*  внешний отступ вправо  */
+}
+
+#about-company .contact-text .time-information li .vk {                       /*  ярлык вк  */
+    width: 26px;                                                              /*  ширина и высота видимого сектора  */
+    height: 20px;
+    background-position: 25px 0;                                              /*  позиция картинки  */
+}
+
+#about-company .contact-text .time-information li .fb {                        /*  ярлык fb  */
+    width: 26px;                                                                /*  ширина и высота видимого сектора  */
+    height: 20px;
+    background-position: 25px -20px;                                             /*  позиция картинки  */
+}
+
+#about-company .contact-text .time-information li .insta {                        /*  ярлык инстаграм  */
+    width: 22px;                                                                 /*  ширина и высота видимого сектора  */
+    height: 20px;
+    background-position: 0 -20px;                                                /*  позиция картинки  */
+}
+
+/* блок наша команда */
+#about-company .team {                                   /*  контейнер где содержится весь блок  */
+    margin-bottom: 100px;                                /*  внешний отступ  */
+}
+
+#about-company .team h2 {                                 /*  заголовок */
+    text-align: center;                                  /* расположение шрифта относительно блока  */
+    font-size: 32px;
+    line-height: 48px;
+    font-weight: 700;
+    color: #2a2a2a;
+    margin-bottom: 40px;
+}
+
+#about-company .team .list {                           /*  список  людей   */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 100px;
+}
+
+#about-company .team .list .person {                      /*  блок информации про человека  */
+    display: flex;
+    justify-content: center;
+    width: 33.33%;                              /*  делем ширину на 3 и отнимает 70px отступ между ними надо указывать только в том случии если задавать отступу */
+    margin-bottom: 30px;                                 /*  внешний отступ   */
+}
+
+#about-company .team .list .person img {                 /* фотка рабочего */
+    display: block;                                      /*  делаем блочный элемент  */
+    margin-right: 20px;                                  /*  внешний отступ с право  */
+}
+
+/* имя и должность рабочего */
+#about-company .team .list .person-info p {
+    font-size: 18px;
+    line-height: 24px;
+    color: #2a2a2a;
+}
+
+#about-company .team .list .person-info .name {
+    font-weight: 800;
+}
+
+#about-company .team .list .person-info .position {
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+/* номер телефона рабочего */
+#about-company .team .list .person-info .number a {
+    display: flex;
+    color: #2a2a2a;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+#about-company .team .list .person-info .number img {
+    display: block;
+    filter: brightness(0.1);
+    margin-right: 12px;
+}
+
+#about-company .team .list .person-info .number span {
+    display: block;
+}
+
+/* эмеил */
+#about-company .team .list .email a {                             /*  к тексту  */
+    display: flex;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #2a2a2a;
+}
+
+#about-company .team .list .email .img {                            /*  значок имела  */
+    display: block;                                               /*  блочный элемент  */
+    background-image: url("../pic/label.png");                    /*  подсоединяем картинку  */
+    filter: brightness(0.1);                                      /*  затемняем ее  */
+    width: 20px;                                                 /*  область видимости (размер)  */
+    height: 20px;
+    background-position: -20px 0;                                /*  позиция ярлыка на картинке   */
+    margin-right: 5px;                                           /*  отступ внешний от ярлыка до текста  */
+}
+
+/* apartments */
+
+/* Заголовок   */
+
+#apartments .flats h1 {                /* Заголовок h1  */
+    font-size: 30px;                  /* размер текста  */
+    font-weight: 700;                 /* толщина текста */
+    text-align: center;               /* расположение шрифта относительно блока  */
+    margin-bottom: 50px;              /* Нижний отступ для другого блока */
+}
+
+/* фильтры   */
+#apartments .filter {                     /* Обшей блок с фильтрами разделяем на две части */
+    display: flex;                       /* что бы все было ровно */
+    justify-content: center;            /* равнение по центру */
+    margin-bottom: 40px;               /* Нижний отступ для другого блока */
+}
+
+#apartments .filter .check-in {              /* правый блок  */
+    margin-right: 30px;                     /* внешний отступ с права  */
+    width: 310px;                          /* ширина блока  */
+}
+
+#apartments .filter .check-in p {             /* стили для текста */
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #1b1b1c;
+    margin-bottom: 10px;
+}
+
+#apartments .filter .check-in .date-in-out {          /* блок где лежат инпуты */
+    display: flex;
+    align-items: center;                             /* отображение по центру */
+}
+
+#apartments .filter .check-in .date-in-out input {       /* само обращение к формам */
+    display: block;                                      /* перевести все в блочный */
+    border-radius: 4px;                                  /* сделать более округленную форму */
+    font-family: 'Inter', sans-serif;
+    border: 1px solid #000;                              /* рамка */
+    padding: 6px 8px ;                                  /* внутренний отступ */
+}
+
+#apartments .filter .check-in .date-in-out span {          /* к чёрточки между выбором */
+    color: #2a2a2a;
+    padding: 3px;
+}
+
+#apartments .filter .rooms {                               /* левый блок */
+    width:310px;
+}
+
+#apartments .filter .rooms p {                           /* стили для текста */
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #1b1b1c;
+    margin-bottom: 10px;
+}
+
+#apartments .filter .rooms .quantity {                 /* блок со spam (кнопки, выбор количество комнат) */
+    display: flex;
+}
+
+#apartments .filter .rooms .quantity span {             /* делам текст кнопками */
+    display: block;                                     /* переводим строчный элемент в блочный */
+    border: 1px solid #ccc;                             /* рамка */
+    color: #ccc;                                        /* цвет */
+    padding: 8px;                                       /* внутренний отступ */
+    border-radius:  5px  ;                              /* округляем рамку */
+    margin-right: 5px;
+}
+
+#apartments .filter .rooms .quantity .active {           /* что бы кнопа была выделена */
+    border: 1px solid #000;
+    color: #fff;
+    background: #000;
+}
+
+/* Список квартир   */
+#apartments .flats .list {                             /* Блок списка квартир */
+    display: flex;                                    /* Как будут отображаться    */
+    flex-wrap: wrap;                                 /* Выстраиваются в таблицу  */
+    justify-content: space-between;                 /* Делятся на лево и право по середине пробел  */
+    margin-bottom: 40px;                           /* Нижний отступ для другого блока */
+}
+
+#apartments .flats .list .item {              /* Сами блоки квартир */
+    width: calc(33.33% - 24px);              /* Ширина блока минус 24px это пробелы между блоками */
+    margin-bottom: 36px;                     /* отступ вниз */
+    background: #ffffff;                     /* заливка самого блока */
+    position: relative;                      /* что бы в углу появилась цена   */
+}
+
+#apartments .flats .list .item:nth-child(3n) {          /* Псевдокласс каждый 3 элемент выделяется  */
+    margin-right: 0;
+}
+
+#apartments .flats .list .item .img img {
+    display: block;                                          /* Делаем картинку блочным элементом */
+    width: 100%;                                         /* что бы ширина занимала всю область родительского блока */
+}
+
+#apartments .flats .list .info {                     /* текст к картинки (инфа квартиры) */
+    padding: 30px 40px;                               /* Вокруг внутренний отступ */
+}
+
+#apartments .flats .list .info p  {                    /* стили для текста описание квартиры */
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #2a2a2a;
+}
+
+#apartments .flats .list .info .type {                    /* стили для тип квартиры */
+    font-weight: 700;
+}
+
+#apartments .flats .list .info .adr {                   /* стили для адреса квартиры */
+    margin-bottom: 20px;
+}
+
+#apartments .flats .list .info .persson  {                /* стили для текста */
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #2a2a2a;
+}
+
+#apartments .flats .list .info .persson span {            /* отступ между картинками */
+    padding-right: 5px;
+}
+
+/* Ценник который в картинке */
+#apartments .flats .list .price {         /* В родительском блоке мы пишем relative; что бы можно было от него отступы считать */
+    position: absolute;                     /* тут прописываем absolute  */
+    top: 15px;                               /* Позиция считается от краев экрана (броузера) */
+    right: 15px;
+    background: #2A2A2A;                     /* цвет ценника */
+    padding: 18px 15px;                     /* внутренние отступы */
+    border-radius: 5px;                    /* Закругляем рамочку */
+    color: #ffffff;                       /* цвет шрифта */
+}
+
+/* comments */
+
+#comments h1 {                                /* заголовок */
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 32px;
+    line-height: 48px;
+    font-weight: 700;
+    color: #2a2a2a;
+}
+
+#comments .list {                             /* блок для постов */
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 70px;
+}
+
+#comments .list .left, .right {               /* ширина колонки лево и право */
+    width: 568px;
+}
+
+#comments .list .post {                       /* сам пост */
+    display: flex;
+    flex-direction: column;
+    width: 568px;
+    background-color: #f4efed;
+    padding: 40px;
+    margin-bottom: 30px;
+}
+
+#comments .list .post .comment {                 /* сам текст с комментарием */
+    margin-bottom: 30px;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #2a2a2a;
+}
+
+#comments .list .post .author {                  /* блок с данными о пользователе */
+    display: flex;
+}
+
+#comments .list .post .author img {              /* фото пользователя */
+    display: block;
+    margin-right: 15px;
+}
+
+#comments .list .post .name-city {                   /* блок с именем и город */
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 700;
+    color: #2a2a2a;
+    margin: 3px 0;
+}
+
+#comments .list .post .date {                    /* блок с датой публикации */
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #2a2a2a;
+}
+
+/* Homepage */
+
+#our-apartments h1 {                                /* заголовок */
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 32px;
+    line-height: 48px;
+    font-weight: 700;
+    color: #2a2a2a;
+}
+#our-apartments .outside-button {               /* контейнер для кнопки  */
+    display: flex;
+    justify-content: center;
+    margin-bottom: 90px;
+}
+
+#our-apartments .outside-button:last-child {    /* в последней кнопки делаем меньше отступ  */
+    margin-bottom: 40px;
+}
+
+#our-apartments .outside-button .button {           /* сама кнопка  */
+    display: block;
+    text-align: center;
+    border: 1px solid #2a2a2a;           /* создаем рамка вокруг: толшина тип цвет  */
+    border-radius: 20px ;               /* закругление имеет 4 свойства  */
+    font-size: 15px;
+    font-weight: 500;
+    color: #2a2a2a;                      /* цвет текста  */
+    padding: 10px 20px;                 /* внутрение отступы от текста  */
+    transition: .3s;                   /*  время выполнение задачи, ноль можно не указывать (0,3)  */
+}
+
+
+
+#our-apartments .button:hover {           /* псевдокласс :hover срабатывает, когда пользователь наводит на элемент мышью */
+    background: #E1E1E1;               /* В какой цвет должен изменятся при наведение  */
+    box-shadow: 0 0 6px 1px #cccc ;    /* смешение x, y , размытость ,рамка толшина ,цвет ( это тень) */
+    color: #2A2A2A;                    /* изменение цвета текста при наведении  */
+}
+
+#our-apartments h2 {                            /*отзовы*/
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 32px;
+    line-height: 48px;
+    font-weight: 700;
+    color: #2a2a2a;
+}
+
+#our-apartments .com .list {                /* убераем отступ */
+    margin-bottom: 0;
+}
+
+#our-apartments .point {                    /* блок с точками  */
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+#our-apartments .point p {                   /* сами точки  */
+    width: 9px;
+    height: 9px;
+    background-color: #1b1b1c;
+    opacity: 0.25;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+#our-apartments .point p:first-child {              /* Делаем первую точку чёрной  */
+    opacity: 1;
+}
+
+/* form */
+
+#form h1 {                                    /* заголовок */
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 32px;
+    line-height: 48px;
+    font-weight: 700;
+    color: #2a2a2a;
+}
+
+#form .apartment-view {                       /* Блок с про квартиру */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+#form .apartment-view .picture {            /* блок с фотографиями квартиры */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 570px;
+
+}
+
+#form .apartment-view .picture .big {       /* большая картинка (первая) */
+    display: block;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+#form .apartment-view .picture img {        /* остальные картинки квартиры */
+    display: block;
+    width: auto;
+    margin-bottom: 30px;
+}
+
+#form .apartment-view .picture img:nth-last-of-type(-n+2) {         /* в последних 2-х элементах убираем отступ */
+    margin-bottom: 0;
+}
+
+#form .apartment-view .details {
+    display: flex;
+    flex-direction: column;
+    width: 570px;
+    padding: 40px;
+}
+
+#form .apartment-view .details .price {              /* надпись цена в сутки  */
+    display: block;
+    opacity: 0.4;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #1b1b1c;
+    margin-bottom: 20px;
+}
+
+#form .apartment-view .details h2 {
+    font-size: 40px;
+    line-height: 22px;
+    font-weight: 500;
+    color: #1b1b1c;
+    margin-bottom: 30px;
+}
+
+#form .apartment-view .details .block-button {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+#form .apartment-view .details .button {
+    display: block;
+    text-align: center;
+    border: 1px solid #2a2a2a;           /* создаем рамка вокруг: толшина тип цвет  */
+    border-radius: 20px ;               /* закругление имеет 4 свойства  */
+    font-size: 15px;
+    font-weight: 500;
+    color: #2a2a2a;                      /* цвет текста  */
+    padding: 10px 20px;                 /* внутрение отступы от текста  */
+    transition: .3s;                   /*  время выполнение задачи, ноль можно не указывать (0,3)  */
+}
+
+
+
+#form .apartment-view .details .button:hover {           /* псевдокласс :hover срабатывает, когда пользователь наводит на элемент мышью */
+    background: #E1E1E1;               /* В какой цвет должен изменятся при наведение  */
+    box-shadow: 0 0 6px 1px #cccc ;    /* смешение x, y , размытость ,рамка толшина ,цвет ( это тень) */
+    color: #2A2A2A;                    /* изменение цвета текста при наведении  */
+}
+
+#form .apartment-view .details .about {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #1b1b1c;
+    margin-bottom: 30px;
+}
+
+#form .apartment-view .details .article {
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(27, 27, 28, .1);
+}
+
+#form .apartment-view .details .article:last-child {
+    border-bottom: none;
+}
+
+#form .apartment-view .details .article span {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #2a2a2a;
+}
+
+#form .apartment-view .details .article img {
+    margin-right: 10px;
+}
+
+#form .map {                         /* раздел с картой */
+    margin-bottom: 40px;
+
+}
+#form .map img {                         /* что бы картинка была в блоке (регулировала размер) */
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* блок с бронью квартиры */
+
+#form .reservation {
+    margin-bottom: 40px;
+}
+
+#form .reservation h2 {
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 32px;
+    line-height: 48px;
+    font-weight: 700;
+    color: #2a2a2a;
+}
+
+#form .reservation .booking {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#form .reservation .calendar {
+    display: flex;
+    flex-direction: column;
+    width: 570px;
+    padding: 40px;
+}
+
+#form .reservation .calendar .month {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+#form .reservation .calendar .day {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#form .reservation .calendar .day p {
+    width: 60px;
+    text-align: center;
+}
+
+#form .reservation .calendar .week {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+#form .reservation .calendar .week p {
+    width: 60px;
+    height: 35px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #2a2a2a;
+
+}
+#form .reservation .calendar .week .active {
+    border: 1px solid #2a2a2a;
+    border-radius: 5px;
+}
+
+
+
+#form .reservation .massage {
+    width: 570px;
+}
+
+
+
+
+
+/* подвал */
+
+.footer {                                           /* внутренние отступы блока  */
+    padding: 65px 0 25px 0;
+}
+
+.footer .info {                                     /* для верхней (первой) строчки  */
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 34px;
+    border-bottom: 1px solid #ffffff;; ;
+}
+
+.footer .info .nav {                                 /* логотип и меню */
+    display: flex;
+    align-items: center;                             /* центрирование относительно лого*/
+    width: 50%;
+    margin-bottom: 70px;
+}
+
+.footer .info .nav .logo {                          /* логотип */
+    margin-right: 50px;
+}
+
+.footer .info .nav a {                              /*  меню */
+    margin-right: 50px;                             /* отступ между словами в меню */
+    text-decoration: none;                          /* форматируем текст */
+    color: #fff;                                    /* цвет текста */
+    font-size: 18px;                                /* размер текста */
+}
+
+.footer .info .contact {                            /* блок с контактами */
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.footer .info .address {                            /* блок адрес */
+    display: flex;
+    width: 70%;
+    position: relative;
+}
+
+.footer .info .address .img {                       /* значок к адресу */
+    display: block;
+    background-image: url("../pic/label.png");
+    position: absolute;
+    top: 0;                                      /* Позиция считается от краев экрана (броузера) */
+    left: 0;
+    width: 20px;
+    height: 20px;
+}
+
+.footer .info .address p {                          /* текст адреса */
+    padding-left: 23px;
+    padding-right: 0.5em;
+    word-wrap: break-word;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.footer .info .social {                             /* блок с значками социальной сети */
+    display: flex;
+    flex-direction: column;
+}
+
+.footer .info .social .phone {                      /* блок с телефоном */
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.footer .info .social .phone a {                    /* номер телефона */
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+.footer .info .social .url {                        /* блок со значками соц сети */
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .info .social .url a {                       /* сами значки вставка ярлыков */
+    display: block;
+    background-image: url("../pic/label.png");
+}
+
+/* социальные сети ставка ярлыков */
+.footer .info .social .url .email {
+    width: 17px;
+    height: 22px;
+    background-position: -22px 0;
+}
+
+.footer .info .social .url .vk {
+    width: 17px;
+    height: 22px;
+    background-position: -44px 0;
+}
+
+.footer .info .social .url .fb {
+    width: 15px;
+    height: 22px;
+    background-position: -44px 22px;
+}
+
+.footer .info .social .url .insta {
+    width: 17px;
+    height: 18px;
+    background-position: 0 -20px;
+}
+
+.footer .rules {                                        /* блок с правилами */
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.footer .rules a {                                      /* текст с правилами */
+    display: block;
+    opacity: 0.4;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #ffffff;
+    margin-right: 18px;
+    margin-bottom: 28px;
+}
+
+.footer .rules a:last-child {                           /* убираем отступ к последнему слову */
+    margin-right: 0;
+
+}
