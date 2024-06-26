@@ -1,0 +1,1400 @@
+/* desktop version */
+@media (min-width: 768px) {
+	body {
+		background: radial-gradient(50% 50% at 50% 50%, rgba(26, 21, 21, 0) 0%, rgba(1, 1, 1, 0.16) 100%), #FFFFFF;
+		mix-blend-mode: normal;
+	}
+
+	/* h2 - heading */
+	h2 {
+		display: inline-block; /* Makes the element block-level for content only */
+		font-family: 'Montserrat', sans-serif; /* Sets Montserrat font with fallback to sans-serif */
+		font-style: normal; /* Sets the font style to normal */
+		font-weight: 700; /* Sets font weight to 700 */
+		font-size: 30px; /* Sets font size to 30 pixels */
+		line-height: 38px; /* Sets line height to 38 pixels */
+		letter-spacing: 0.35538em; /* Sets letter spacing to 0.35538em */
+		color: #000000; /* Sets text color to black */
+		box-sizing: border-box; /* Sets the box-sizing model to include padding and borders in element's size */
+		border: 8px solid #000000; /* Sets a black border with a thickness of 8 pixels */
+		padding: 40px 75px; /* Sets padding: 40 pixels on top and bottom, 75 pixels on the sides */
+	}
+
+	/* Button */
+	.button-style {
+		display: inline-block; /* Makes the element block-level with the ability to set margins and width */
+		padding: 10px 20px; /* Internal padding of the button: 10 pixels on top and bottom, 20 pixels on the sides */
+		text-decoration: none; /* Removes text underline */
+		font-family: 'Montserrat', sans-serif; /* Sets Montserrat font with fallback to sans-serif */
+		font-style: normal; /* Sets the font style to normal */
+		font-weight: 600; /* Sets font weight to 600 */
+		font-size: 15px; /* Sets font size to 15 pixels */
+		line-height: 18px; /* Sets line height to 18 pixels */
+		color: #000000; /* Sets text color to black */
+		border-right: 2px solid #000000; /* Sets the right border to a thickness of 2 pixels in black */
+		border-left: 2px solid #000000; /* Sets the left border to a thickness of 2 pixels in black */
+	}
+
+	/* For the header */
+	header {
+		display: flex; /* Sets the element as a flex container for using flexbox */
+		justify-content: flex-end; /* Aligns content to the right end */
+		align-items: center; /* Aligns content center vertically */
+		width: 100%; /* Sets the width of the element to 100% */
+		height: 66px; /* Sets the height of the element to 66 pixels */
+		background-color: #0B0B0B; /* Sets the background color of the element */
+		position: fixed; /* Fixes the element on the screen */
+		top: 0; /* Positions the element at the top of the screen */
+		left: 0; /* Positions the element at the left edge of the screen */
+		z-index: 1000; /* Change z-index if necessary for correct layering */
+	}
+
+	header .mob-see,
+	header .menu-toggle-label {
+		display: none; /* Hides elements .mob-see and .menu-toggle-label inside <header> */
+	}
+
+	header .menu-flyout {
+		display: flex; /* Sets the element as a flex container for using flexbox */
+		justify-content: flex-end; /* Aligns content to the right end */
+		align-items: center; /* Centers content vertically */
+	}
+
+	header .menu-main {
+		margin-right: 70px; /* Right margin of 70 pixels */
+		font-family: 'Montserrat', sans-serif; /* Montserrat font */
+		font-style: normal; /* Normal style */
+		font-weight: 700; /* Bold */
+		font-size: 15px; /* Font size 15 pixels */
+		line-height: 18px; /* Line height 18 pixels */
+		text-align: center; /* Center alignment */
+	}
+
+	.menu-main a {
+		display: inline-block; /* Makes links block elements to apply margins and padding */
+		padding: 10px 10px; /* Padding: 20 pixels top and bottom, 5 pixels left and right */
+		margin-right: 30px; /* Right margin of 30 pixels */
+		color: #FFFFFF; /* Button text color (white) */
+		text-decoration: none; /* Removes link underline */
+		transition: color 0.3s; /* Color change animation on hover */
+	}
+
+	.menu-main a:hover {
+		color: #808080FF; /* Text color on mouse hover */
+		background-color: #1c1c1c; /* Sets the background color of the element */
+		border-radius: 46px; /* Rounds the corners of the element with a radius of 46 pixels */
+	}
+
+	#contact-me {
+		display: inline-block; /* Sets the element as an inline-block that only occupies necessary width */
+		padding: 10px; /* Sets internal padding around the content */
+		border-radius: 46px; /* Rounds the corners of the element with a radius of 46 pixels */
+		background-color: #FFFFFF; /* Sets the background color of the element to white */
+		color: #000000; /* Sets the text color of the element to black */
+		text-decoration: none; /* Removes text underline */
+		border: none; /* Removes the border around the element */
+		transition: box-shadow 0.3s, transform 0.3s; /* Animation for shadow and size change */
+	}
+
+	#contact-me:hover {
+		background-color: #808080FF; /* Text color on mouse hover */
+		color: #FFFFFFFF; /* Sets the text color as hexadecimal code with transparency (Alpha) */
+		box-shadow: 0 0 10px rgba(244, 244, 244, 0.5); /* Gray shadow on hover */
+	}
+
+	#contact-me:active {
+		transform: scale(0.95); /* Reduces size on press */
+	}
+
+	header .flag {
+		margin-right: 35px; /* Right margin of 35 pixels */
+		width: 55px;
+	}
+
+	/* 1st block presentation */
+	/* hide mobile version on desktop */
+	#mob-preview {
+		display: none; /* Completely hides the element, leaving no space in the layout */
+
+	}
+
+	#preview {
+		background-image: linear-gradient(to right, #D7D7D7 50%, #000000 50%); /* Adds color for the background */
+		margin-bottom: 142px;
+	}
+
+	/* Sets the width for the entire page to maximum */
+	.container {
+		width: 100%; /* Sets width to 100% by default */
+		max-width: 1200px; /* Maximum width for desktop */
+		margin: 0 auto; /* Automatic centering */
+	}
+
+	#preview .prev {
+		background-image: url('../pic/entrepreneur.png'); /* Sets the background to the image entrepreneur.png */
+		background-size: cover; /* Stretches the image to cover the entire block */
+		background-position: center; /* Centers the image within the block */
+		background-repeat: no-repeat; /* Prevents image repetition */
+		display: flex; /* Sets the element as a flex container for using flexbox */
+		height: 1022px; /* Sets the block height to 1022 pixels */
+		width: 100%; /* Sets the block width to 100% */
+	}
+
+	#preview .name-prev {
+		padding-left: 154px; /* Adds a left padding of 154 pixels */
+		padding-top: 351px; /* Adds a top padding of 351 pixels */
+	}
+
+	#preview .name-prev .name {
+		font-family: 'Raleway', sans-serif; /* Uses the Raleway font */
+		font-style: normal; /* Normal font style */
+		font-weight: 700; /* Bold (700) font weight */
+		font-size: 40px; /* Font size of 40 pixels */
+		line-height: 47px; /* Line height of 47 pixels */
+		color: #000000; /* Black text color */
+		text-align: left; /* Left text alignment */
+	}
+
+	#preview .name-prev .name span {
+		font-family: 'Raleway', sans-serif; /* Uses the Raleway font */
+		font-style: normal; /* Normal font style */
+		font-weight: 700; /* Bold (700) font weight */
+		font-size: 80px; /* Font size of 80 pixels */
+		line-height: 94px; /* Line height of 94 pixels */
+		color: #000000; /* Black text color */
+		padding-left: 70px; /* Left padding from the text */
+	}
+
+	#preview .name-prev .prof-prev {
+		font-family: 'Raleway', sans-serif; /* Uses the Raleway font */
+		font-style: normal; /* Normal font style */
+		font-weight: 400; /* Normal (400) font weight */
+		font-size: 25px; /* Font size of 25 pixels */
+		line-height: 29px; /* Line height of 29 pixels */
+		text-align: center; /* Center text alignment */
+		color: #919191; /* Gray text color (#919191) */
+		margin-bottom: 137px; /* Bottom margin from the text */
+	}
+
+	#preview .name-prev .soc-prev img {
+		background: #C4C4C4; /* Gray background color (#C4C4C4) for the image */
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); /* Image shadow */
+		margin-left: 31px; /* Left margin from the image */
+		padding: 10px; /* Internal padding of the image */
+	}
+
+
+	#preview .empty-prev {
+		width: 50%; /* Sets the width of the block to 50% of the parent container */
+	}
+
+	/* mentor block */
+	#preview .tutor-prev {
+		min-height: 313px; /* Sets the minimum height of the block to 313 pixels */
+		background-color: #1D1D1D; /* Sets the background color of the block */
+		display: flex; /* Sets the block as a flex container */
+		justify-content: space-between; /* Distributes space between items */
+		align-items: center; /* Vertically centers items */
+		overflow: hidden; /* Hides elements that overflow the container */
+		position: relative; /* Sets the position as relative for additional control */
+	}
+
+	#preview .tutor-prev .tutor-prev-text {
+		flex: 1; /* Element stretches to take up available space */
+		padding: 20px; /* Adds padding inside the element */
+	}
+
+	#preview .tutor-prev .tutor-prev-logo {
+		height: auto; /* Maintains the proportions of the logo */
+		margin-left: 20px; /* Adds left margin to the logo */
+	}
+
+	/* Title */
+	#preview .tutor-prev h2 {
+		font-family: 'Montserrat', sans-serif; /* Uses Montserrat font */
+		text-transform: uppercase; /* Transforms text to uppercase */
+		font-style: normal; /* Sets normal font style */
+		font-weight: 700; /* Sets font weight to bold */
+		font-size: 30px; /* Sets font size to 30 pixels */
+		line-height: 37px; /* Sets line height to 37 pixels */
+		letter-spacing: 0.18538em; /* Sets letter spacing */
+		color: #FFFFFF; /* Sets text color to white */
+		margin-bottom: 33px; /* Sets bottom margin to 33 pixels */
+		border: none; /* Removes border from the title */
+		white-space: nowrap; /* Prevents text wrapping */
+	}
+
+	#preview .tutor-prev p {
+		font-family: 'Open Sans', sans-serif; /* Uses Open Sans font */
+		font-style: normal; /* Sets normal font style */
+		font-weight: 400; /* Sets font weight to normal */
+		font-size: 15px; /* Sets font size to 15 pixels */
+		line-height: 138.68%; /* Sets line height */
+		text-align: justify; /* Justifies text alignment */
+		color: #FFFFFF; /* Sets text color to white */
+		margin-bottom: 52px; /* Sets bottom margin to 52 pixels */
+	}
+
+	/* READ MORE button */
+	#preview .tutor-prev a {
+		display: inline-block; /* Makes the element block-level with the ability to set margins and width */
+		padding: 10px 20px; /* Internal padding of the button */
+		text-decoration: none; /* Removes text underline */
+		font-family: 'Montserrat', sans-serif; /* Uses Montserrat font */
+		font-style: normal; /* Sets normal font style */
+		font-weight: 600; /* Sets font weight to 600 */
+		font-size: 15px; /* Sets font size to 15 pixels */
+		line-height: 18px; /* Sets line height to 18 pixels */
+		color: #FFFFFF; /* Sets text color to white */
+		border-right: 2px solid #FFFFFF; /* Adds right border */
+		border-left: 2px solid #FFFFFF; /* Adds left border */
+	}
+
+	/* on hover of the READ MORE button */
+	#preview .tutor-prev a:hover {
+		background-color: #FFFFFF; /* Sets background color to white on hover */
+		color: #000000; /* Changes text color on hover */
+	}
+
+	/* removes mobile button */
+	#preview .tutor-prev .mob-more {
+		display: none;
+	}
+
+	/* 2nd block about-me */
+	#about-me .container {
+		display: flex; /* Sets the container as a flex container */
+		flex-direction: column; /* Sets the main axis direction as column */
+		align-items: center; /* Centers items vertically */
+	}
+
+	/* Title */
+	#about-me h2 {
+		margin-bottom: 22px; /* Adds bottom margin to the title */
+	}
+
+	/* text */
+	#about-me p {
+		font-family: 'Open Sans', sans-serif; /* Uses Open Sans font */
+		font-style: normal; /* Normal text style */
+		font-weight: 300; /* Light font weight */
+		font-size: 15px; /* Font size of 15 pixels */
+		line-height: 20px; /* Line height of 20 pixels */
+		text-align: center; /* Aligns text to the center */
+		color: #000000; /* Black text color */
+		margin-bottom: 24px; /* Bottom margin */
+	}
+
+	/* second paragraph, not recommended to do this as our layout can be dynamic (using id) this is done for example */
+	#about-me p:nth-child(3) {
+		margin-bottom: 77px; /* Increases bottom margin for the third element */
+	}
+
+	/* button */
+	#about-me .button-style {
+		margin-bottom: 51px; /* Sets bottom margin for the button */
+	}
+
+	/* Divider */
+	#about-me .divider{
+		margin-bottom: 110px; /* Sets bottom margin for the divider */
+	}
+
+	/* Professions - description */
+	#about-me .label-prof {
+		display: flex; /* Sets the element as a flex container */
+		margin-bottom: 20px; /* Sets bottom margin */
+	}
+
+	/* Text block */
+	#about-me .label-prof div,
+	#maintenance {
+		padding-left: 80px; /* Sets internal left padding */
+		display: inline-block; /* Makes the element block-level */
+		background-size: 50px 50px; /* Sets background image size */
+		background-position: 50px top; /* Positions the image at the top left corner */
+		background-repeat: no-repeat; /* Prevents image repetition */
+	}
+
+	#about-me .label-prof #tutor {
+		background-image: url('../pic/logo-so/tutor.png'); /* Sets background image */
+	}
+
+	#about-me .label-prof #development {
+		background-image: url('../pic/logo-so/DEVELOPMENT.png'); /* Sets background image for "Development" profession */
+	}
+
+	#about-me #maintenance {
+		background-image: url('../pic/logo-so/MAINTENANCE.png'); /* Sets background image for "Maintenance" */
+		margin-bottom: 140px; /* Sets bottom margin for "Maintenance" */
+	}
+
+	/* Styles for "About Me" title */
+	#about-me .about-h3 {
+		font-family: 'Montserrat', sans-serif; /* Sets the font */
+		font-style: normal; /* Normal font style */
+		font-weight: 700; /* Bold font */
+		font-size: 30px; /* Font size */
+		line-height: 37px; /* Line spacing */
+		display: flex; /* Sets the element as a flex container for using flexbox */
+		alignItems: center; /* Centers items vertically */
+		textAlign: center; /* Centers text alignment */
+		letter-spacing: 0.18538em; /* Letter spacing */
+		font-variant: all-small-caps; /* Transforms all letters to uppercase */
+		color: #000000; /* Text color */
+		padding: 10px 0; /* Internal padding top and bottom */
+	}
+
+
+	/* Стили для параграфа "About Me" */
+	#about-me .about-p {
+		font-family: 'Open Sans', sans-serif; /* Устанавливаем шрифт */
+		font-style: normal; /* Обычный стиль шрифта */
+		font-weight: 300; /* Тонкий шрифт */
+		font-size: 14px; /* Размер шрифта */
+		line-height: 19px; /* Межстрочный интервал */
+		text-align: justify; /* Выравнивание текста по ширине */
+		color: #000000; /* Цвет текста */
+	}
+
+
+	#about-me .divider {
+		margin-bottom: 120px;
+	}
+
+	/* 3rd block skills */
+	#skills {
+		margin-bottom: 86px;
+	}
+
+	/* Adding to our container */
+	#skills .container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	/* Title of the block */
+	#skills h2 {
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 700;
+		color: #333;
+		margin-bottom: 80px;
+		text-align: center;
+	}
+
+	/* Heading */
+	#skills h3 {
+		font-family: 'Montserrat', sans-serif;
+		font-style: normal;
+		font-weight: 700;
+		font-size: 30px;
+		line-height: 37px;
+		letter-spacing: 0.18538em;
+		color: #000000;
+		align-self: flex-start;
+		margin-bottom: 93px;
+		width: 100%;
+		padding-left: 80px;
+	}
+
+	/* Row */
+	#skills  .skills-row {
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		width: 100%;
+		margin-bottom: 76px;
+	}
+
+	/* Block with logo and text */
+	#skills .skills-row figure {
+		margin: 0 15px;
+		text-align: center;
+		width: 190px;
+	}
+
+	/* Logo */
+	#skills  .skills-row img {
+		max-width: 100px;
+		height: auto;
+		margin-bottom: 30px;
+	}
+
+	/* Text under the logo */
+	#skills  .skills-row figcaption {
+		font-family: 'Montserrat', sans-serif;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 29px;
+		text-align: center;
+		letter-spacing: 0.13538em;
+		color: #000000;
+	}
+
+	/* Remove this tag in the mobile version */
+	#skills .mob-first {
+		display: none;
+	}
+
+	/* 4th block portfolio */
+	/* Common styles for the portfolio section */
+	#portfolio {
+		background-color: #1A1A1A;
+		margin-bottom: 140px;
+	}
+
+	/* Styles for the h2 header */
+	#portfolio .portfolio-h2 {
+		background-image:  url('../pic/background.png');
+		height: 300px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
+
+
+	#portfolio .portfolio-main {
+		background-color: #1A1A1A;
+	}
+
+
+	#portfolio .portfolio-menu {
+		margin: 50px auto;
+		display: flex;
+		justify-content: center;
+	}
+
+	#portfolio .portfolio-menu a {
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 600;
+		font-size: 14px;
+		line-height: 17px;
+		color: #7C7C7C;
+		padding: 10px 150px;
+		border-bottom: 1px solid #AAAAAA;
+	}
+
+	#portfolio .portfolio-menu a:first-child {
+		color: #FFFBFB;
+		border-bottom: 1px solid #FFFFFF;
+	}
+
+
+	#portfolio .portfolio-project {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(540px, 1fr)); /
+	}
+
+	#portfolio	.portfolio-project a {
+		display: block;
+	}
+
+	#portfolio .portfolio-project img {
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+
+
+	 p {
+		margin: 0 auto;
+		padding: 25px;
+		color: #fff;
+		font-family: 'Montserrat', sans-serif;
+		font-style: normal;
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 24px;
+		text-align: center;
+	}
+
+
+	/* 5th block CONTACT */
+	/* Common styles for the contact section */
+	#contact {
+		padding: 50px 0; /* Paddings top and bottom */
+	}
+
+	/* Styles for the container */
+	#contact .container {
+		display: flex; /* Use flexbox */
+		flex-direction: column; /* Arrange elements in a column */
+		align-items: center; /* Center elements horizontally */
+	}
+
+	#contact h2 {
+		margin-bottom: 25px; /* Bottom margin */
+	}
+
+	/* Styles for paragraphs */
+	#contact p {
+		font-family: 'Open Sans', sans-serif;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 15px;
+		line-height: 138.68%; /* Or 21px */
+		text-align: center;
+		color: #000000;
+		max-width: 800px; /* Maximum width */
+		margin-bottom: 25px; /* Bottom margin */
+	}
+
+	#contact .divider {
+		margin-bottom: 120px; /* Bottom margin */
+	}
+
+	/* Styles for the form */
+	#contact form {
+		display: flex; /* Use flexbox */
+		flex-direction: column; /* Arrange elements in a column */
+		align-items: center; /* Center elements horizontally */
+		width: 100%; /* Form width */
+		max-width: 600px; /* Maximum form width */
+	}
+
+	/* Styles for input fields and textarea */
+	#contact form input[type="text"],
+	#contact form input[type="email"],
+	#contact form input[type="tel"],
+	#contact form textarea {
+		font-family: 'Montserrat', sans-serif;
+		font-style: normal;
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 17px;
+		display: flex;
+		align-items: center;
+		letter-spacing: 0.04em;
+		color: #8B8B8B; /* Text color for placeholders */
+		width: 100%; /* Width of input fields */
+		margin-bottom: 50px; /* Bottom margin */
+		padding: 10px; /* Internal padding */
+		border: none; /* No border */
+		background-color: transparent;
+		box-sizing: border-box; /* Include borders and padding in the size */
+		border-left: 5px solid #000000; /* Left border */
+		border-bottom: 5px solid #000000; /* Bottom border */
+	}
+
+	/* Styles for input fields and textarea when focused */
+	#contact form input[type="text"]:focus,
+	#contact form input[type="email"]:focus,
+	#contact form input[type="tel"]:focus,
+	#contact form textarea:focus {
+		border: 1px dashed #000; /* Border on focus */
+		outline: none; /* Remove the standard outline */
+	}
+
+	/* Styles for the submit button */
+	#contact form button[type="submit"] {
+		font-family: 'Montserrat', sans-serif;
+		font-style: normal;
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 17px;
+		color: #000; /* Text color */
+		padding: 10px 20px; /* Internal padding */
+		background: transparent; /* Transparent background */
+		border: none; /* Remove borders */
+		border-left: 2px solid #000; /* Left border */
+		border-right: 2px solid #000; /* Right border */
+		cursor: pointer; /* Cursor pointer, shows how you can change it to anything you want */
+		transition: background 0.3s, color 0.3s; /* Animation for background and color changes */
+	}
+
+	/* Styles for the submit button on hover */
+	#contact form button[type="submit"]:hover {
+		background: #000; /* Background on hover */
+		color: #fff; /* Text color on hover */
+	}
+
+	/* footer */
+
+	footer {
+		background-color: #000000; /* Black background color */
+		padding: 70px 0; /* Internal padding top and bottom */
+		display: flex; /* Use Flexbox */
+		flex-direction: column; /* Arrange elements in a column */
+		align-items: center; /* Horizontally center elements */
+		text-align: center; /* Text aligned center */
+		color: #FFFFFF; /* White text color */
+	}
+
+	footer #up {
+		display: flex; /* Use Flexbox */
+		flex-direction: column; /* Arrange the image and text in a column */
+		align-items: center; /* Horizontally center elements */
+		text-decoration: none; /* Remove link underline */
+		color: #FFFFFF; /* White text color */
+		margin-bottom: 45px; /* Bottom margin */
+	}
+
+	footer #up img {
+		margin-bottom: 10px; /* Bottom margin for the image */
+	}
+
+	footer .soc-prev {
+		display: flex; /* Use Flexbox */
+		justify-content: center; /* Horizontally center elements */
+		margin-bottom: 45px; /* Bottom margin */
+	}
+
+	footer .soc-prev a {
+		margin: 0 10px; /* Margins between icons */
+	}
+
+	footer p {
+		margin: 0; /* Remove margins from the paragraph */
+		font-family: 'Nunito';
+		font-style: normal;
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 25px;
+		color: #FFFFFF;
+		padding: 0;   /* Remove internal padding from the paragraph, which was given somewhere above */
+	}
+
+	footer small {
+		font-weight: 400;
+	}
+}
+
+
+/* === Mobile version === */
+@media (max-width: 767px) {
+	/* Background */
+	body {
+		background: radial-gradient(50% 50% at 50% 50%, rgba(26, 21, 21, 0) 0%, rgba(1, 1, 1, 0.16) 100%), #FFFFFF;
+		mix-blend-mode: normal;
+	}
+
+	/* Add side paddings */
+	.container {
+		padding: 0 45px;
+	}
+
+	/* Work with the header, black strip */
+	header {
+		display: flex; /* Set up as a flex-container for elements */
+		align-items: center; /* Align elements vertically in the center */
+		height: 60px; /* Set container height to 60 pixels */
+		width: 100%; /* Set container width to 100% of the screen width */
+		background-color: #0B0B0B; /* Set the background color of the container */
+		position: fixed; /* Fix the container in position on the screen */
+		top: 0; /* Align the container at the top edge of the screen */
+		left: 0; /* Align the container at the left edge of the screen */
+		z-index: 1000; /* Adjust z-index as necessary for correct overlay of elements */
+	}
+	/* Where this class is present, we display nothing */
+	.mob-see {
+		display: none; /* Hide elements that are visible only on mobile devices */
+	}
+
+	/* Common style for h2 */
+	h2 {
+		display: inline-block; /* Makes the element block-level only for content */
+		font-family: 'Montserrat', sans-serif; /* Set Montserrat font with fallback to sans-serif */
+		font-style: normal; /* Set the normal style of the font */
+		font-weight: 700; /* Set the font weight to 700 */
+		font-size: 14px; /* Set the font size */
+		line-height: 127.9%;/* Set the line height to 38 pixels */
+		letter-spacing: 0.43538em; /* Set the letter spacing to 0.35538em */
+		color: #000000; /* Set the text color to black */
+		box-sizing: border-box; /* Set the box-sizing model to include padding and borders in the element's size */
+		border: 8px solid #000000; /* Set a border thickness of 8 pixels in black */
+		padding: 20px 35px; /* Set internal padding: 40 pixels on top and bottom, 75 pixels on the left and right */
+	}
+
+	/* Button */
+	.button-style {
+		display: inline-block; /* Makes the element block-level with the ability to set margins and width */
+		padding: 10px 20px; /* Internal padding of the button: 10 pixels on top and bottom, 20 pixels on the left and right */
+		text-decoration: none; /* Removes text underline */
+		font-family: 'Montserrat', sans-serif; /* Set Montserrat font with fallback to sans-serif */
+		font-style: normal; /* Set the normal style of the font */
+		font-weight: 600; /* Set the font weight to 600 */
+		font-size: 15px; /* Set the font size to 15 pixels */
+		line-height: 18px; /* Set the line height to 18 pixels */
+		color: #000000; /* Set the text color to black */
+		border-right: 2px solid #000000; /* Set the right border to a thickness of 2 pixels in black */
+		border-left: 2px solid #000000; /* Set the left border to a thickness of 2 pixels in black */
+	}
+
+	header a,
+	header label {
+		display: inline-block; /* Set the element as block-level, but without a line break */
+		margin: 0 10px; /* Set horizontal margins 0 on top and bottom, 10px on the left and right */
+	}
+
+	/* Set the size of icons */
+	.logo {
+		width: 50px; /* Set the width of the element */
+		height: 50px; /* Set the height of the element */
+	}
+
+	.close-toggle {
+		width: 30px; /* Set the width of the element */
+		height: 30px; /* Set the height of the element */
+	}
+
+	.menu-toggle-label {
+		display: flex; /* Set the element as a flex container */
+		align-items: center; /* Align items vertically in the center */
+		cursor: pointer; /* Set cursor as pointer */
+		margin-right: 10px; /* Set right margin to 10 pixels */
+	}
+
+	/* Dropdown menu */
+	.menu-flyout {
+		display: none; /* Initially hide the menu */
+		position: absolute; /* Absolute positioning */
+		top: 100%; /* Position the menu just below the parent element */
+		left: 0; /* Align the menu to the left edge of the screen */
+		width: 100%; /* Set the width to full block */
+		background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent dark background */
+		box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1); /* Gray shadow from below */
+		z-index: 1000; /* Set z-index for correct overlay of elements */
+		text-align: center; /* Center text within the menu */
+	}
+
+	.menu-flyout.open {
+		display: block; /* Display the menu when opened */
+	}
+
+	.menu-flyout .menu-main {
+		display: flex; /* Set the element as a flex container */
+		flex-direction: column; /* Arrange list items vertically */
+	}
+
+	.menu-flyout .menu-main a {
+		display: block; /* Display as block */
+		padding: 10px 0; /* Padding around list items */
+		color: #fff; /* Text color */
+		text-decoration: none; /* Remove text underline */
+	}
+
+	.menu-flyout .menu-main a:hover {
+		background-color: rgba(255, 255, 255, 0.2); /* Background color on hover */
+	}
+
+	/* Styles for the "CONTACT ME" button */
+	#contact-me {
+		background-color: #fff; /* White background */
+		color: #000; /* Black text */
+		border: none; /* Remove border */
+		padding: 10px 20px; /* Padding around text */
+		margin: 10px 0; /* Margin top and bottom */
+		cursor: pointer; /* Pointer cursor */
+		text-transform: uppercase; /* Convert text to uppercase */
+	}
+
+	#contact-me:hover {
+		background-color: #acb6b3; /* Light background on hover */
+		color: #000; /* Black text on hover */
+	}
+
+	/* Hide the bottom flag */
+	.menu-flyout .flag {
+		display: none; /* Hide elements visible only on mobile devices */
+	}
+
+	/* Block 1 */
+	/* Hide desktop version on mobile */
+	#preview {
+		display: none;
+	}
+
+	/* First carousel */
+	.first {
+		height: 757px;
+		display: flex; /* Arrange items in a row inside the block */
+		justify-content: center; /* Horizontally center align */
+		align-items: center; /* Vertically center align */
+		flex-direction: column; /* Arrange items in a column */
+		background-image: url('../pic/background-mob.png'); /* Replace 'path_to_your_image.jpg' with the actual path to your background image */
+		background-size: contain; /* Set background image size */
+		background-position: center; /* Centers the background image */
+		background-repeat: no-repeat; /* Prevent background image from repeating */
+		position: relative; /* Set relative position */
+		padding: 20px; /* Inner block padding */
+	}
+
+	.first::before {
+		background: radial-gradient(circle, rgba(19, 19, 19, 0.2) 0%, rgba(19, 19, 19, 0.8) 100%); /* Set radial gradient background */
+	}
+
+	/* Text */
+	.first .name {
+		font-family: 'Advent Pro'; /* Set font to Advent Pro */
+		font-style: normal; /* Set normal font style */
+		font-weight: 400; /* Set font weight to 400 */
+		font-size: 25px; /* Set font size to 25px */
+		line-height: 30px; /* Set line height to 30px */
+		text-align: center; /* Center align text */
+		color: #FFFFFF; /* Set text color to white */
+	}
+
+	.first .prof-prev {
+		font-family: 'Montserrat'; /* Set font to Montserrat */
+		font-style: normal; /* Set normal font style */
+		font-weight: 600; /* Set font weight to 600 */
+		font-size: 32px; /* Set font size to 32px */
+		line-height: 39px; /* Set line height to 39px */
+		text-align: center; /* Center align text */
+		color: #FFFFFF; /* Set text color to white */
+		margin-bottom: 14px; /* Set bottom margin to 14px */
+	}
+
+	/* Work with divider and lighten it */
+	.first .divider {
+		display: block; /* Set element as block to set width and height */
+		margin: 0 auto; /* Center align horizontally */
+		filter: invert(100%); /* Invert element colors */
+		margin-bottom: 26px; /* Set bottom margin to 26px */
+	}
+
+	/* Social networks */
+	.first .soc-prev {
+		display: flex;
+		justify-content: center; /* Center align horizontally */
+	}
+
+	.first .soc-prev a {
+		margin-right: 32px; /* Right margin for all elements */
+	}
+
+	.first .soc-prev a:last-child {
+		margin-right: 0; /* Remove right margin for the last element */
+	}
+
+	/* Second carousel */
+	.prev-item.second {
+		height: 757px; /* Set element height to 757px */
+		display: flex; /* Set as flex container */
+		flex-direction: column; /* Arrange items in a column */
+		background-color: #0B0B0B; /* Set background color */
+		background-image: url('../pic/man.png'); /* Set background image */
+		background-size: 600px 700px; /* Set background image size */
+		background-position: bottom left; /* Position background image to bottom left */
+		background-repeat: no-repeat; /* Prevent background image from repeating */
+		position: relative; /* Set relative position */
+	}
+
+	.second .name-prev {
+		display: flex;
+		justify-content: space-between; /* Center align horizontally */
+		align-items: center; /* Center align vertically */
+		position: absolute; /* Set absolute position for name-prev block */
+		bottom: 0; /* Place block at the bottom of the parent block */
+		background: rgba(0, 0, 0, 0.56); /* Background color with 56% transparency */
+		height: 215px; /* Set height to 215px */
+		width: 100%; /* Set width to 100% */
+	}
+
+	.second .text-prev {
+		text-align: center; /* Center-align text */
+		margin-bottom: 20px; /* Add bottom margin */
+	}
+
+	.second .name {
+		font-family: 'Raleway'; /* Set font to Raleway */
+		font-style: normal; /* Set normal font style */
+		font-weight: 700; /* Set font weight to 700 */
+		font-size: 20px; /* Set font size to 20px */
+		line-height: 23px; /* Set line height to 23px */
+		color: #FFFFFF; /* Set text color to white */
+	}
+
+	.second .name span {
+		font-size: 35px; /* Set font size to 35px */
+		line-height: 41px; /* Set line height to 41px */
+		color: #FFFFFF; /* Set text color to white */
+		margin-left: 100px; /* Set left margin to 100px */
+	}
+
+	.second .prof-prev {
+		font-family: 'Raleway'; /* Set font to Raleway */
+		font-style: normal; /* Set normal font style */
+		font-weight: 800; /* Set font weight to 800 */
+		font-size: 15px; /* Set font size to 15px */
+		line-height: 20px; /* Set line height to 20px */
+		color: #FFFFFF; /* Set text color to white */
+		margin-left: 100px; /* Set left margin to 100px */
+	}
+
+	.second .soc-prev {
+		display: flex;
+		flex-direction: column; /* Arrange items in a column */
+		gap: 10px; /* Add gap between icons */
+		margin-right: 20px; /* Right margin */
+	}
+
+	.second .soc-prev img {
+		width: 30px; /* Set icon width */
+		height: auto; /* Auto-adjust icon height */
+	}
+
+	/* IT tutor */
+	.tutor-prev {
+		padding: 50px;
+		background-color: #1D1D1D; /* Black background */
+		display: flex; /* Set as flex container */
+		flex-direction: column; /* Arrange items in a column (vertically) */
+		align-items: center; /* Center-align items vertically */
+		margin-bottom: 75px;
+	}
+
+	/* Block with text */
+	.tutor-prev .tutor-prev-text {
+		display: flex; /* Set as flex container */
+		flex-direction: column; /* Arrange items in a column (vertically) */
+		align-items: center; /* Center-align items vertically */
+		background-color: #1D1D1D; /* Black background */
+		background-image: url('../pic/ITB.svg'); /* Path to the image */
+		background-position: center; /* Center the image */
+		background-repeat: no-repeat; /* Do not repeat the image */
+		background-size: contain; /* Scale image to fit */
+		height: 420px;
+		width: 100%; /* Full width of browser window */
+	}
+
+	/* Heading */
+	.tutor-prev h2 {
+		font-family: 'Montserrat'; /* Set font to Montserrat */
+		font-style: normal; /* Set normal font style */
+		font-weight: 700; /* Set font weight to 700 */
+		font-size: 25px; /* Set font size to 25px */
+		line-height: 30px; /* Set line height to 30px */
+		display: flex; /* Set as flex container for heading */
+		align-items: center; /* Center-align items vertically */
+		text-align: center; /* Center-align text */
+		letter-spacing: 0.18538em; /* Set letter spacing */
+		font-variant: all-small-caps; /* Set all letters to small caps */
+		color: #FFFFFF; /* Set text color to white */
+		margin-bottom: 35px; /* Bottom margin */
+		border: none; /* Remove border - to be added later */
+	}
+
+	/* Text */
+	.tutor-prev p {
+		font-family: 'Open Sans'; /* Set font to Open Sans */
+		font-style: normal; /* Set normal font style */
+		font-weight: 400; /* Set font weight to 400 */
+		font-size: 15px; /* Set font size to 15px */
+		line-height: 138.68%; /* Set line height in percentage */
+		text-align: justify; /* Justify-align text */
+		color: #FFFFFF; /* Set text color to white */
+	}
+
+	/* Read more button */
+	.tutor-prev .mob-more {
+		display: inline-block; /* Make element inline-block for padding and width */
+		padding: 10px 45px; /* Button padding */
+		font-family: 'Montserrat'; /* Set font to Montserrat */
+		font-style: normal; /* Set normal font style */
+		font-weight: 600; /* Set font weight to 600 */
+		font-size: 15px; /* Set font size to 15px */
+		line-height: 18px; /* Set line height to 18px */
+		text-align: center; /* Center-align text */
+		color: #FFFFFF; /* Set text color to white */
+		text-decoration: none; /* Remove text underline */
+		border-right: 2px solid #FFFFFF; /* Right border */
+		border-left: 2px solid #FFFFFF; /* Left border */
+	}
+
+	/* Elements to hide in mobile version */
+	.tutor-prev-logo, .tutor-prev-text a {
+		display: none; /* Hide elements */
+	}
+
+	/* Block 2 about-me */
+	#about-me .container {
+		display: flex; /* Set as flex container */
+		flex-direction: column; /* Arrange items in a column */
+		align-items: center; /* Align items horizontally */
+		text-align: center; /* Center-align text */
+	}
+
+	/* Heading h2 */
+	#about-me h2 {
+		margin-bottom: 20px; /* Bottom margin 20px */
+	}
+
+	/* Text */
+	#about-me p {
+		font-family: 'Open Sans'; /* Set font to Open Sans */
+		font-style: normal; /* Set normal font style */
+		font-weight: 300; /* Set font weight to 300 */
+		font-size: 12px; /* Set font size to 12px */
+		line-height: 16px; /* Set line height to 16px */
+		text-align: justify; /* Justify-align text */
+		color: #000000; /* Set text color to black */
+		margin-top: 20px; /* Top margin 20px */
+		/* if we use 20 pixels here then we should also take 20 pixels from h2 so that we have a 40-pixel sum */
+	}
+
+	/* Additional styles for the button */
+	#about-me .button-style {
+		margin: 65px 0; /* Top and bottom margins of 65px */
+	}
+
+	#about-me .divider {
+		margin-bottom: 65px; /* Bottom margin of 65px */
+	}
+
+	/* Profession - description */
+	#about-me .label-prof {
+		display: flex; /* Set as flex container */
+		flex-direction: column; /* Arrange items in a column */
+		align-items: center; /* Center-align items horizontally */
+		margin-bottom: 20px; /* Bottom margin */
+	}
+
+	/* Block with text */
+	#about-me .label-prof div,
+	#maintenance {
+		padding-left: 30px; /* Left padding */
+		display: inline-block; /* Set as inline-block */
+		background-size: 50px 50px; /* Set background image size */
+		background-position: 0 top; /* Position background image at top left */
+		background-repeat: no-repeat; /* Prevent background image from repeating */
+	}
+
+	/* Styles for "tutor" profession */
+	#about-me .label-prof #tutor {
+		background-image: url('../pic/logo-so/tutor.png'); /* Set background image */
+	}
+
+	/* Styles for "development" profession */
+	#about-me .label-prof #development {
+		background-image: url('../pic/logo-so/DEVELOPMENT.png'); /* Set background image for "Development" */
+	}
+
+	/* Styles for "maintenance" */
+	#about-me #maintenance {
+		background-image: url('../pic/logo-so/MAINTENANCE.png'); /* Set background image for "Maintenance" */
+		margin-bottom: 30px; /* Bottom margin for "Maintenance" */
+	}
+
+	/* Styles for "About Me" heading */
+	#about-me .about-h3 {
+		font-family: 'Montserrat', sans-serif; /* Set font */
+		font-style: normal; /* Normal font style */
+		font-weight: 700; /* Bold font */
+		font-size: 30px; /* Font size */
+		line-height: 37px; /* Line height */
+		display: flex; /* Set as flex container for flexbox usage */
+		align-items: center; /* Center-align vertically */
+		text-align: center; /* Center-align text */
+		letter-spacing: 0.18538em; /* Letter spacing */
+		font-variant: all-small-caps; /* Convert all letters to small caps */
+		color: #000000; /* Text color */
+		padding: 10px 0; /* Top and bottom padding */
+	}
+
+	/* Styles for "About Me" paragraph */
+	#about-me .about-p {
+		font-family: 'Open Sans', sans-serif; /* Set font */
+		font-style: normal; /* Normal font style */
+		font-weight: 300; /* Light font */
+		font-size: 14px; /* Font size */
+		line-height: 19px; /* Line height */
+		text-align: justify; /* Justify-align text */
+		color: #000000; /* Text color */
+		margin-bottom: 50px; /* Bottom margin */
+	}
+
+	/* Block 3 skills */
+	/* Block with icons */
+	#skills .container {
+		display: flex; /* Set as flex container */
+		flex-direction: column; /* Arrange items in a column */
+		align-items: center; /* Center-align items horizontally */
+		text-align: center; /* Center-align text inside figure elements */
+	}
+
+	/* Heading */
+	#skills h2 {
+		margin-bottom: 50px; /* Bottom margin 50px */
+		margin-top: 35px; /* Top margin 35px */
+	}
+
+	/* Title */
+	#skills h3 {
+		font-family: 'Montserrat'; /* Set font to Montserrat */
+		font-style: normal; /* Set normal font style */
+		font-weight: 700; /* Set font weight to 700 */
+		font-size: 30px; /* Set font size to 30px */
+		line-height: 37px; /* Set line height to 37px */
+		display: flex; /* Set as flex container for the heading */
+		align-items: center; /* Center-align items vertically */
+		letter-spacing: 0.18538em; /* Letter spacing */
+		color: #000000; /* Set text color to black */
+		margin-bottom: 65px; /* Bottom margin of 65px */
+	}
+
+	/* Block with logos */
+	#skills figure {
+		margin: 0 15px; /* Add margins between figure elements */
+		margin-bottom: 80px; /* Bottom margin of 80px */
+		font-family: 'Montserrat'; /* Set font to Montserrat */
+		font-style: normal; /* Set normal font style */
+		font-weight: 400; /* Set font weight to 400 */
+		font-size: 24px; /* Set font size to 24px */
+		line-height: 29px; /* Set line height to 29px */
+		text-align: center; /* Center-align text */
+		letter-spacing: 0.13538em; /* Letter spacing */
+		color: #000000; /* Set text color to black */
+	}
+
+	/* Text below logos */
+	#skills figcaption {
+		margin-top: 30px; /* Top margin of 30px */
+	}
+
+	/* Button "more" */
+	#skills .mob-first {
+		margin-bottom: 35px; /* Bottom margin of 35px */
+	}
+
+	/* Hide unnecessary blocks */
+	#skills .mob-none {
+		display: none; /* Hide elements */
+	}
+
+	/* Block 4 portfolio */
+
+	/* General styles for portfolio section */
+	#portfolio {
+		background-color: #1A1A1A; /* Background color for section */
+	}
+
+	/* Styles for heading h2 */
+	#portfolio .portfolio-h2 {
+		background-image:  url('../pic/background.png');
+		height: 300px; /* Height */
+		display: flex; /* Use flexbox */
+		justify-content: center; /* Center horizontally */
+		align-items: center; /* Center vertically */
+		text-align: center; /* Center-align text */
+	}
+
+	/* Styles for main portfolio container */
+	#portfolio .portfolio-main {
+		background-color: #1A1A1A; /* Background color for container */
+	}
+
+	/* Styles for portfolio menu */
+	#portfolio .portfolio-menu {
+		margin: 50px auto; /* Top and bottom margins of 50px, auto left and right */
+		display: flex; /* Use flexbox */
+		flex-wrap: wrap; /* Allow items to wrap to new lines */
+		justify-content: center; /* Center items horizontally */
+		align-items: center; /* Center items vertically */
+	}
+
+	#portfolio .portfolio-menu a {
+		font-family: 'Montserrat', sans-serif; /* Font Montserrat or fallback sans-serif */
+		font-weight: 600; /* Bold font weight */
+		font-size: 14px; /* Font size 14 pixels */
+		line-height: 17px; /* Line height 17 pixels */
+		color: #7C7C7C; /* Text color grey */
+		padding: 10px 80px; /* Top and bottom padding 10 pixels, left and right padding 150 pixels */
+		border-bottom: 1px solid #AAAAAA; /* Bottom border 1 pixel solid grey */
+		margin-top: 25px; /* Top margin 25px */
+		text-decoration: none; /* Remove underline */
+	}
+
+	#portfolio .portfolio-menu a:first-child {
+		color: #FFFBFB; /* Set text color */
+		border-bottom: 1px solid #FFFFFF; /* Add bottom border */
+	}
+
+	/* Styles for portfolio projects */
+	#portfolio .portfolio-project {
+		display: flex;
+		flex-direction: column;
+	}
+
+	#portfolio .portfolio-project a {
+		display: block; /* Set element as block */
+	}
+
+	#portfolio .portfolio-project img {
+		width: 100%; /* Set width to 100% */
+		height: auto; /* Automatically determine height */
+		display: block; /* Set element as block */
+	}
+
+	/* Styles for paragraphs to add to #portfolio to demonstrate what to do if the tag is missed */
+	p {
+		margin: 0 auto; /* Top and bottom margins of 25px, auto left and right */
+		padding: 25px; /* Set padding to 25px */
+		color: #fff; /* Set text color to white */
+		font-family: 'Montserrat', sans-serif; /* Use Montserrat font with fallback to sans-serif */
+		font-style: normal; /* Set normal font style */
+		font-weight: 600; /* Set font weight to 600 */
+		font-size: 20px; /* Set font size to 20px */
+		line-height: 24px; /* Set line height to 24px */
+		text-align: center; /* Center-align text */
+	}
+
+	/* Block 5 contact */
+
+	/* General styles for contact section */
+	#contact {
+		padding: 50px 0; /* Top and bottom padding */
+	}
+
+	/* Styles for container */
+	#contact .container {
+		display: flex; /* Use flexbox */
+		flex-direction: column; /* Arrange items in column */
+		align-items: center; /* Center-align items horizontally */
+	}
+
+	#contact h2 {
+		margin-bottom: 25px; /* Bottom margin */
+	}
+
+	/* Styles for paragraphs */
+	#contact p {
+		font-family: 'Open Sans', sans-serif;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 15px;
+		line-height: 138.68%; /* or 21px */
+		text-align: center;
+		color: #000000;
+		max-width: 800px; /* Maximum width */
+		margin-bottom: 25px; /* Bottom margin */
+	}
+
+	#contact .divider {
+		margin-bottom: 65px; /* Bottom margin */
+	}
+
+	/* Styles for form */
+	#contact form {
+		display: flex; /* Use flexbox */
+		flex-direction: column; /* Arrange items in column */
+		align-items: center; /* Center-align items horizontally */
+		width: 100%; /* Form width */
+		max-width: 600px; /* Maximum form width */
+	}
+
+	/* Styles for input fields and textarea */
+	#contact form input[type="text"],
+	#contact form input[type="email"],
+	#contact form input[type="tel"],
+	#contact form textarea {
+		font-family: 'Montserrat', sans-serif; /* Use Montserrat font with fallback to sans-serif */
+		font-style: normal; /* Set normal font style */
+		font-weight: 700; /* Set font weight to 700 */
+		font-size: 14px; /* Set font size to 14px */
+		line-height: 17px; /* Set line height to 17px */
+		display: flex; /* Use flex container */
+		align-items: center; /* Center-align items vertically */
+		letter-spacing: 0.04em; /* Letter spacing */
+		color: #8B8B8B; /* Placeholder text color */
+		width: 100%; /* Input field width 100% */
+		margin-bottom: 50px; /* Bottom margin of 50px */
+		padding: 10px; /* Set padding to 10px */
+		border: none; /* Remove input borders */
+		background-color: transparent; /* Transparent background */
+		box-sizing: border-box; /* Include borders and padding in element's total width and height */
+		border-left: 5px solid #000000; /* Left border 5px solid black */
+		border-bottom: 5px solid #000000; /* Bottom border 5px solid black */
+	}
+
+	/* Styles for input fields and textarea when focused */
+	#contact form input[type="text"]:focus,
+	#contact form input[type="email"]:focus,
+	#contact form input[type="tel"]:focus,
+	#contact form textarea:focus {
+		border: 1px dashed #000; /* Border when focused */
+		outline: none; /* Remove default outline */
+	}
+
+	/* Styles for submit button */
+	#contact form button[type="submit"] {
+		font-family: 'Montserrat', sans-serif;
+		font-style: normal;
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 17px;
+		color: #000; /* Text color */
+		padding: 10px 20px; /* Padding */
+		background: transparent; /* Transparent background */
+		border: none; /* Remove borders */
+		border-left: 2px solid #000; /* Left border */
+		border-right: 2px solid #000; /* Right border */
+		cursor: pointer; /* Pointer cursor */
+		transition: background 0.3s, color 0.3s; /* Background and color change animation */
+	}
+
+	/* Styles for submit button on hover */
+	#contact form button[type="submit"]:hover {
+		background: #000; /* Background on hover */
+		color: #fff; /* Text color on hover */
+	}
+
+	/* Footer styles */
+	footer {
+		background-color: #000000; /* Black background color */
+		padding: 70px 0; /* Top and bottom padding */
+		display: flex; /* Use Flexbox */
+		flex-direction: column; /* Arrange items in column */
+		align-items: center; /* Center-align items horizontally */
+		text-align: center; /* Center-align text */
+		color: #FFFFFF; /* White text color */
+	}
+
+	footer #up {
+		display: flex; /* Use Flexbox */
+		flex-direction: column; /* Arrange image and text in column */
+		align-items: center; /* Center-align items horizontally */
+		text-decoration: none; /* Remove underline from link */
+		color: #FFFFFF; /* White text color */
+		margin-bottom: 45px; /* Bottom margin */
+		font-family: 'Montserrat', sans-serif;
+		font-style: normal;
+		font-weight: 700;
+		font-size: 15px;
+		line-height: 18px;
+		letter-spacing: 0.18538em;
+		text-transform: uppercase; /* Convert text to uppercase */
+	}
+
+	footer #up img {
+		margin-bottom: 10px; /* Bottom margin for image */
+	}
+
+	footer .soc-prev {
+		display: flex; /* Use Flexbox */
+		justify-content: center; /* Center-align items horizontally */
+		margin-bottom: 45px; /* Bottom margin */
+	}
+
+	footer .soc-prev a {
+		margin: 0 10px;
+	}
+
+	footer p {
+		margin: 0;
+		font-family: 'Nunito', sans-serif;
+		font-style: normal;
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 25px;
+		color: #FFFFFF;
+		padding: 0;
+	}
+
+	footer small {
+		font-weight: 400;
+	}
+}

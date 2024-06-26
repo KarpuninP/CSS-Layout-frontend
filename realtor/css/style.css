@@ -1,0 +1,913 @@
+/* rest css */
+img{border:none;}
+textarea,input,button{outline:none;}
+textarea:focus, input:focus, button:focus{outline:none; border:none;}
+textarea:active, input:active, button:active{outline:none;border:none;}
+a:hover {outline: none;}
+.btn.submit:focus {
+    outline-style: none;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, main {
+    display: block;
+}
+label{margin:0;}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+body {
+    background-color: #F5F5F5;
+    font-family: 'Inter', sans-serif;
+}
+
+
+.wrap {
+    max-width: 1160px;
+    min-width: 320px;
+    margin: 0 auto;
+}
+.black {
+    background-color: #2A2A2A;
+
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    margin-bottom: 45px;
+}
+
+.header .nav {
+    display: flex;
+    align-items: center;
+}
+
+.header .phone {
+    display: flex;
+}
+
+.header .logo {
+    margin-right: 50px;
+}
+
+.header .nav a {
+    margin-right: 50px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+
+.header .nav a:last-child {
+    margin-right: 0;
+}
+
+.header .phone .number {
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+.header .phone .number img {
+    display: block;
+    margin-right: 10px;
+    width: 14px;
+    height: 14px;
+}
+
+.header .phone .call {
+    border: 1px solid #ffffff;
+    border-radius: 20px ;
+    color: #fff;
+    padding: 10px 20px;
+    transition: .3s;
+}
+
+.header .phone .call:hover {
+    background: #E1E1E1;
+    box-shadow: 0 0 6px 1px #cccc ;
+    color: #2A2A2A;
+}
+
+
+#about-company .about {
+    margin-bottom: 80px;
+}
+
+#about-company .about h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #2a2a2a;
+    text-align: center;
+    margin-bottom: 33px;
+}
+
+#about-company .about .text-about {
+    border-left: 2px solid #2a2a2a ;
+    padding: 0 30px;
+    margin: 0 88px 78px 88px;
+}
+
+#about-company .about .text-about p {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #2a2a2a;
+}
+
+#about-company .about .text-about p:first-child {
+    margin-bottom: 38px;
+}
+
+#about-company .contact-text {
+    margin-bottom: 50px;
+    background-color: #f5f5f5;
+}
+
+#about-company .contact-text h2 {
+    text-align: center;
+    font-size: 32px;
+    line-height: 48px;
+    font-weight: 700;
+    color: #2a2a2a;
+    margin-bottom: 50px;
+}
+
+#about-company .contact-text .contact-main {
+    display: flex;
+    padding-bottom: 60px;
+}
+
+#about-company .contact-text .contact-main .time-information {
+    padding: 40px;
+}
+
+#about-company .contact-text .time-information p {
+    font-size: 24px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #2a2a2a;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+
+#about-company .contact-text .time-information li {
+    padding: 19px;
+    border-bottom: 1px solid rgba(27, 27, 28, .1);
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #2a2a2a;
+}
+
+#about-company .contact-text .time-information li:last-child {
+    border-bottom: none;
+}
+
+#about-company .contact-text .time-information li a {
+    text-decoration: none;
+    color: #2a2a2a;
+}
+
+#about-company .contact-text .time-information .social {
+    display: flex;
+}
+
+#about-company .contact-text .time-information .social a {
+    display: block;
+    background-image: url("../pic/label.png");
+    filter: brightness(0.1);
+    margin-right: 20px;
+}
+
+#about-company .contact-text .time-information li .vk {
+    width: 26px;
+    height: 20px;
+    background-position: 25px 0;
+}
+
+#about-company .contact-text .time-information li .fb {
+    width: 26px;
+    height: 20px;
+    background-position: 25px -20px;
+}
+
+#about-company .contact-text .time-information li .insta {
+    width: 22px;
+    height: 20px;
+    background-position: 0 -20px;
+}
+
+/* блок наша команда */
+#about-company .team {
+    margin-bottom: 100px;
+}
+
+#about-company .team h2 {
+    text-align: center;
+    font-size: 32px;
+    line-height: 48px;
+    font-weight: 700;
+    color: #2a2a2a;
+    margin-bottom: 40px;
+}
+
+#about-company .team .list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 100px;
+}
+
+#about-company .team .list .person {
+    display: flex;
+    justify-content: center;
+    width: 33.33%;
+    margin-bottom: 30px;
+}
+
+#about-company .team .list .person img {
+    display: block;
+    margin-right: 20px;
+}
+
+#about-company .team .list .person-info p {
+    font-size: 18px;
+    line-height: 24px;
+    color: #2a2a2a;
+}
+
+#about-company .team .list .person-info .name {
+    font-weight: 800;
+}
+
+#about-company .team .list .person-info .position {
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+#about-company .team .list .person-info .number a {
+    display: flex;
+    color: #2a2a2a;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+#about-company .team .list .person-info .number img {
+    display: block;
+    filter: brightness(0.1);
+    margin-right: 12px;
+}
+
+#about-company .team .list .person-info .number span {
+    display: block;
+}
+
+#about-company .team .list .email a {
+    display: flex;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #2a2a2a;
+}
+
+#about-company .team .list .email .img {
+    display: block;
+    background-image: url("../pic/label.png");
+    filter: brightness(0.1);
+    width: 20px;
+    height: 20px;
+    background-position: -20px 0;
+    margin-right: 5px;
+}
+
+/* apartments */
+#apartments .flats h1 {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* фильтры   */
+#apartments .filter {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+#apartments .filter .check-in {
+    margin-right: 30px;
+    width: 310px;
+}
+
+#apartments .filter .check-in p {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #1b1b1c;
+    margin-bottom: 10px;
+}
+
+#apartments .filter .check-in .date-in-out {
+    display: flex;
+    align-items: center;
+}
+
+#apartments .filter .check-in .date-in-out input {
+    display: block;
+    border-radius: 4px;
+    font-family: 'Inter', sans-serif;
+    border: 1px solid #000;
+    padding: 6px 8px ;
+}
+
+#apartments .filter .check-in .date-in-out span {
+    color: #2a2a2a;
+    padding: 3px;
+}
+
+#apartments .filter .rooms {
+    width:310px;
+}
+
+#apartments .filter .rooms p {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #1b1b1c;
+    margin-bottom: 10px;
+}
+
+#apartments .filter .rooms .quantity {
+    display: flex;
+}
+
+#apartments .filter .rooms .quantity span {
+    display: block;
+    border: 1px solid #ccc;
+    color: #ccc;
+    padding: 8px;
+    border-radius:  5px  ;
+    margin-right: 5px;
+}
+
+#apartments .filter .rooms .quantity .active {
+    border: 1px solid #000;
+    color: #fff;
+    background: #000;
+}
+
+/* List of apartments   */
+#apartments .flats .list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+#apartments .flats .list .item {
+    width: calc(33.33% - 24px);
+    margin-bottom: 36px;
+    background: #ffffff;
+    position: relative;
+}
+
+#apartments .flats .list .item:nth-child(3n) {
+    margin-right: 0;
+}
+
+#apartments .flats .list .item .img img {
+    display: block;
+    width: 100%;
+}
+
+#apartments .flats .list .info {
+    padding: 30px 40px;
+}
+
+#apartments .flats .list .info p  {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #2a2a2a;
+}
+
+#apartments .flats .list .info .type {
+    font-weight: 700;
+}
+
+#apartments .flats .list .info .adr {
+    margin-bottom: 20px;
+}
+
+#apartments .flats .list .info .persson  {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #2a2a2a;
+}
+
+#apartments .flats .list .info .persson span {
+    padding-right: 5px;
+}
+
+/* The price tag is in the picture */
+#apartments .flats .list .price {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #2A2A2A;
+    padding: 18px 15px;
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+/* comments */
+#comments h1 {
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 32px;
+    line-height: 48px;
+    font-weight: 700;
+    color: #2a2a2a;
+}
+
+#comments .list {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 70px;
+}
+
+#comments .list .left, .right {
+    width: 568px;
+}
+
+#comments .list .post {
+    display: flex;
+    flex-direction: column;
+    width: 568px;
+    background-color: #f4efed;
+    padding: 40px;
+    margin-bottom: 30px;
+}
+
+#comments .list .post .comment {
+    margin-bottom: 30px;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #2a2a2a;
+}
+
+#comments .list .post .author {
+    display: flex;
+}
+
+#comments .list .post .author img {
+    display: block;
+    margin-right: 15px;
+}
+
+#comments .list .post .name-city {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 700;
+    color: #2a2a2a;
+    margin: 3px 0;
+}
+
+#comments .list .post .date {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #2a2a2a;
+}
+
+/* Homepage */
+#our-apartments h1 {
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 32px;
+    line-height: 48px;
+    font-weight: 700;
+    color: #2a2a2a;
+}
+
+#our-apartments .outside-button {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 90px;
+}
+
+#our-apartments .outside-button:last-child {
+    margin-bottom: 40px;
+}
+
+#our-apartments .outside-button .button {
+    display: block;
+    text-align: center;
+    border: 1px solid #2a2a2a;
+    border-radius: 20px ;
+    font-size: 15px;
+    font-weight: 500;
+    color: #2a2a2a;
+    padding: 10px 20px;
+    transition: .3s;
+}
+
+#our-apartments .button:hover {
+    background: #E1E1E1;
+    box-shadow: 0 0 6px 1px #cccc ;
+    color: #2A2A2A;
+}
+
+#our-apartments h2 {
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 32px;
+    line-height: 48px;
+    font-weight: 700;
+    color: #2a2a2a;
+}
+
+#our-apartments .com .list {
+    margin-bottom: 0;
+}
+
+#our-apartments .point {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+#our-apartments .point p {
+    width: 9px;
+    height: 9px;
+    background-color: #1b1b1c;
+    opacity: 0.25;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+#our-apartments .point p:first-child {
+    opacity: 1;
+}
+
+/* form */
+#form h1 {
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 32px;
+    line-height: 48px;
+    font-weight: 700;
+    color: #2a2a2a;
+}
+
+#form .apartment-view {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+#form .apartment-view .picture {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 570px;
+
+}
+
+#form .apartment-view .picture .big {
+    display: block;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+#form .apartment-view .picture img {
+    display: block;
+    width: auto;
+    margin-bottom: 30px;
+}
+
+#form .apartment-view .picture img:nth-last-of-type(-n+2) {
+    margin-bottom: 0;
+}
+
+#form .apartment-view .details {
+    display: flex;
+    flex-direction: column;
+    width: 570px;
+    padding: 40px;
+}
+
+#form .apartment-view .details .price {
+    display: block;
+    opacity: 0.4;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #1b1b1c;
+    margin-bottom: 20px;
+}
+
+#form .apartment-view .details h2 {
+    font-size: 40px;
+    line-height: 22px;
+    font-weight: 500;
+    color: #1b1b1c;
+    margin-bottom: 30px;
+}
+
+#form .apartment-view .details .block-button {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+#form .apartment-view .details .button {
+    display: block;
+    text-align: center;
+    border: 1px solid #2a2a2a;
+    border-radius: 20px ;
+    font-size: 15px;
+    font-weight: 500;
+    color: #2a2a2a;
+    padding: 10px 20px;
+    transition: .3s;
+}
+
+
+
+#form .apartment-view .details .button:hover {
+    background: #E1E1E1;
+    box-shadow: 0 0 6px 1px #cccc ;
+    color: #2A2A2A;
+}
+
+#form .apartment-view .details .about {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #1b1b1c;
+    margin-bottom: 30px;
+}
+
+#form .apartment-view .details .article {
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(27, 27, 28, .1);
+}
+
+#form .apartment-view .details .article:last-child {
+    border-bottom: none;
+}
+
+#form .apartment-view .details .article span {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #2a2a2a;
+}
+
+#form .apartment-view .details .article img {
+    margin-right: 10px;
+}
+
+#form .map {
+    margin-bottom: 40px;
+
+}
+#form .map img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* apartment reservation block */
+#form .reservation {
+    margin-bottom: 40px;
+}
+
+#form .reservation h2 {
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 32px;
+    line-height: 48px;
+    font-weight: 700;
+    color: #2a2a2a;
+}
+
+#form .reservation .booking {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#form .reservation .calendar {
+    display: flex;
+    flex-direction: column;
+    width: 570px;
+    padding: 40px;
+}
+
+#form .reservation .calendar .month {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+#form .reservation .calendar .day {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#form .reservation .calendar .day p {
+    width: 60px;
+    text-align: center;
+}
+
+#form .reservation .calendar .week {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+#form .reservation .calendar .week p {
+    width: 60px;
+    height: 35px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #2a2a2a;
+
+}
+#form .reservation .calendar .week .active {
+    border: 1px solid #2a2a2a;
+    border-radius: 5px;
+}
+
+#form .reservation .massage {
+    width: 570px;
+}
+
+/* footer */
+.footer {
+    padding: 65px 0 25px 0;
+}
+
+.footer .info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 34px;
+    border-bottom: 1px solid #ffffff;; ;
+}
+
+.footer .info .nav {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    margin-bottom: 70px;
+}
+
+.footer .info .nav .logo {
+    margin-right: 50px;
+}
+
+.footer .info .nav a {
+    margin-right: 50px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+.footer .info .contact {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.footer .info .address {
+    display: flex;
+    width: 70%;
+    position: relative;
+}
+
+.footer .info .address .img {
+    display: block;
+    background-image: url("../pic/label.png");
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+}
+
+.footer .info .address p {
+    padding-left: 23px;
+    padding-right: 0.5em;
+    word-wrap: break-word;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.footer .info .social {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer .info .social .phone {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.footer .info .social .phone a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+}
+
+.footer .info .social .url {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .info .social .url a {
+    display: block;
+    background-image: url("../pic/label.png");
+}
+
+.footer .info .social .url .email {
+    width: 17px;
+    height: 22px;
+    background-position: -22px 0;
+}
+
+.footer .info .social .url .vk {
+    width: 17px;
+    height: 22px;
+    background-position: -44px 0;
+}
+
+.footer .info .social .url .fb {
+    width: 15px;
+    height: 22px;
+    background-position: -44px 22px;
+}
+
+.footer .info .social .url .insta {
+    width: 17px;
+    height: 18px;
+    background-position: 0 -20px;
+}
+
+.footer .rules {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.footer .rules a {
+    display: block;
+    opacity: 0.4;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #ffffff;
+    margin-right: 18px;
+    margin-bottom: 28px;
+}
+
+.footer .rules a:last-child {
+    margin-right: 0;
+
+}
